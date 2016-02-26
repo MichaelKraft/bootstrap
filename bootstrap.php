@@ -4,7 +4,8 @@
 
 	PrettyConsole::puts10('Configuring System');
 
-	echo "\n";
+	SystemSetup::assert('Remote Login','remotelogin','On');
+	SystemSetup::assert('Restart on Freeze','restartfreeze','On');
 
 	// preferences
 	Preference::assert('Natural Scrolling','NSGlobalDomain com.apple.swipescrolldirection',false,false);
@@ -57,8 +58,111 @@
 	PrettyConsole::puts47('Configuration complete!');
 	echo "\n";
 
+	// brew
+	Brew::install();
+	Brew::packages(array(
+		'git',
+		'git-extras',
+		'logstalgia',
+	));
+	Brew::casks(array(
+		'dropbox',
+		'expandrive',
+		'handbrake',
+		'macdown',
+		'minecraft',
+		'slack',
+		'smcfancontrol',
+		'sublime-text',
+		'owncloud'
+	));
 
 	// classes, functions, etc
+
+	class Brew
+	{
+		static function install()
+		{
+			PrettyConsole::puts251("Repairing permissions...");
+			$directories = array(
+					'/usr/local',
+					'/Library/Caches/Homebrew',
+					'/opt/homebrew-cask'
+				);
+			foreach ($directories as $directory) {
+				exec("sudo chgrp -R admin $directory");
+				exec("sudo chmod -R g+w $directory");
+				PrettyConsole::puts47("Repaired $directory");
+			}
+
+			$test = exec('cat /usr/local/bin/brew');
+			if(strpos($test, 'No such file or directory') !== false)
+			{
+				PrettyConsole::puts226("Installing Homebrew...");
+				exec('ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"');
+			}
+			else
+			{
+				PrettyConsole::puts226("Updating Homebrew...");
+				exec('brew update');
+				exec('brew upgrade');
+			}
+		}
+		static function packages($brews)
+		{
+			foreach ($brews as $brew) {
+				$installed = (strpos(exec("brew ls --versions $brew"), $brew) !== false);
+				if($installed)
+				{
+					PrettyConsole::puts254("$brew installed.");
+				}
+				else
+				{
+					PrettyConsole::puts226("Installing $brew...");
+					// exec("brew install $brew");
+				}
+			}
+		}
+		static function casks($casks)
+		{
+			$dirs = '--appdir=/Applications --fontdir=/Library/Fonts'; 
+			foreach ($casks as $cask) {
+				$output = exec("brew cask ls $dirs $cask 2>&1");
+				$installed = !(strpos($output, 'nothing to list') !== false);
+
+				if($installed)
+				{
+					PrettyConsole::puts254("$cask installed.");
+				} else {
+					PrettyConsole::puts226("Installing $cask...");
+					exec("sudo brew cask install --force $dirs $cask");
+				}
+			}
+		}
+	}
+
+	class SystemSetup
+	{
+		static function assert($label,$key,$value)
+		{
+			$stats = Stats::getInstance();
+			$stats->checked++;
+
+			$command = "sudo systemsetup -get$key";
+			$test = substr(exec($command), (strlen($value) * -1));
+
+			if($test == $value)
+			{
+				PrettyConsole::puts251("$label is $value, not modified.");
+			}
+			else
+			{
+				$stats->changed++;
+				exec("sudo systemsetup -set$key $value");
+				PrettyConsole::puts11("$label is now set to $value.");
+			}
+		}
+	}
 
 	class Preference
 	{
