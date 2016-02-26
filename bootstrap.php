@@ -4,7 +4,7 @@
 
 	PrettyConsole::puts10('Configuring System');
 
-	echo PHP_EOL;
+	echo "\n";
 
 	// preferences
 	Preference::assert('Natural Scrolling','NSGlobalDomain com.apple.swipescrolldirection',false,false);
@@ -38,7 +38,7 @@
 	Preference::assert('Menubar Clock Format','com.apple.menuextra.clock DateFormat','EEE MMM d  H:mm',false);
 	Preference::assert('Analog Clock','com.apple.menuextra.clock IsAnalog',false,false);
 
-	echo PHP_EOL;
+	echo "\n";
 
 	$checked = $stats->checked;
 	$changed = $stats->changed;
@@ -55,7 +55,7 @@
 	}
 
 	PrettyConsole::puts47('Configuration complete!');
-	echo PHP_EOL;
+	echo "\n";
 
 
 	// classes, functions, etc
