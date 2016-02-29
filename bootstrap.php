@@ -36,7 +36,7 @@
 	Preference::assert('Startup Terminal Window','com.Apple.Terminal "Startup Window Settings"','Pro',false);
 	Preference::assert('Show Battery Percentage','com.apple.menuextra.battery ShowPercent',true,false);
 	Preference::assert('Flash Data Separators','com.apple.menuextra.clock FlashDateSeparators',false,false);
-	Preference::assert('Menubar Clock Format','com.apple.menuextra.clock DateFormat','EEE MMM d  H:mm',false);
+	Preference::assert('Menubar Clock Format','com.apple.menuextra.clock DateFormat','EEE MMM d  h:mm',false);
 	Preference::assert('Analog Clock','com.apple.menuextra.clock IsAnalog',false,false);
 
 	echo "\n";
