@@ -10,7 +10,7 @@
 	// preferences
 	Preference::assert('Natural Scrolling','NSGlobalDomain com.apple.swipescrolldirection',false,false);
 	Preference::assert('Firewall','/Library/Preferences/com.apple.alf globalstate',1,true);
-	Preference::assert('Trackpad Tap-To-Click','com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking',true,false);
+	Preference::assert('Trackpad Tap-To-Click','com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking',false,false);
 	Preference::assert('Mouse Tap-To-Click','NSGlobalDomain com.apple.mouse.tapBehavior',0,false);
 	Preference::assert('Expand Save Panel','NSGlobalDomain NSNavPanelExpandedStateForSaveMode',true,false);
 	Preference::assert('Save New Documents to Cloud','NSGlobalDomain NSDocumentSaveNewDocumentsToCloud', false, false);
