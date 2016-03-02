@@ -19,7 +19,7 @@
 	Preference::assert('Preferred View Style','com.apple.finder FXPreferredViewStyle','clmv',false);
 	Preference::assert('Confirm Empty Trash','com.apple.finder WarnOnEmptyTrash',false,false);
 	Preference::assert('Empty Trash Securely','com.apple.finder EmptyTrashSecurely',true,false);
-	Preference::assert('Show All Files','com.apple.finder AppleShowAllFiles',true,false);
+	Preference::assert('Show All Files','com.apple.finder AppleShowAllFiles',false,false);
 	Preference::assert('Show All Extensions','com.apple.finder AppleShowAllExtensions',true,false);
 	Preference::assert('Show Hard Drives on Desktop','com.apple.finder ShowHardDrivesOnDesktop',false,false);
 	Preference::assert('Prevent Write to network stores','com.apple.desktopservices DSDontWriteNetworkStores',true,false);
@@ -27,9 +27,9 @@
 	Preference::assert('Skip Disk Image Verify (Locked)','com.apple.frameworks.diskimages skip-verify-locked',true,false);
 	Preference::assert('Skip Disk Image Verify (Remote)','com.apple.frameworks.diskimages skip-verify-remote',true,false);
 	Preference::assert('Auto-Hide Dock','com.apple.dock autohide',false,false);
-	Preference::assert('Dock Tilesize','com.apple.dock tilesize',64,false);
+	Preference::assert('Dock Tilesize','com.apple.dock tilesize',80,false);
 	Preference::assert('Dock Magnification','com.apple.dock magnification',false,false);
-	Preference::assert('Dock Magnified Size','com.apple.dock largesize',64,false);
+	Preference::assert('Dock Magnified Size','com.apple.dock largesize',80,false);
 	Preference::assert('Most Recently Used Spaces','com.apple.dock mru-spaces',false,false);
 	Preference::assert('Screensaver Password Delay','com.apple.screensaver askForPasswordDelay',5,false);
 	Preference::assert('Default Terminal Window','com.Apple.Terminal "Default Window Settings"','Pro',false);
