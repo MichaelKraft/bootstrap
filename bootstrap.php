@@ -29,7 +29,7 @@
 	Preference::assert('Auto-Hide Dock','com.apple.dock autohide',false,false);
 	Preference::assert('Dock Tilesize','com.apple.dock tilesize',60,false);
 	Preference::assert('Dock Magnification','com.apple.dock magnification',true,false);
-	Preference::assert('Dock Magnified Size','com.apple.dock largesize',80,false);
+	Preference::assert('Dock Magnified Size','com.apple.dock largesize',96,false);
 	Preference::assert('Most Recently Used Spaces','com.apple.dock mru-spaces',false,false);
 	Preference::assert('Screensaver Password Delay','com.apple.screensaver askForPasswordDelay',5,false);
 	Preference::assert('Default Terminal Window','com.Apple.Terminal "Default Window Settings"','Pro',false);
