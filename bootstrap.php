@@ -77,6 +77,9 @@
 		'sublime-text',
 		'owncloud'
 	));
+	Gems::install(array(
+		'synx'
+	));
 
 	// classes, functions, etc
 
@@ -96,17 +99,16 @@
 				PrettyConsole::puts47("Repaired $directory");
 			}
 
-			$test = exec('cat /usr/local/bin/brew');
-			if(strpos($test, 'No such file or directory') !== false)
+			if(!file_exists('/usr/local/bin/brew'))
 			{
 				PrettyConsole::puts226("Installing Homebrew...");
-				exec('sudo ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"');
+				exec('ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null');
 			}
 			else
 			{
 				PrettyConsole::puts226("Updating Homebrew...");
-				exec('sudo brew update');
-				exec('sudo brew upgrade');
+				exec('brew update');
+				exec('brew upgrade');
 			}
 		}
 		static function packages($brews)
@@ -120,7 +122,7 @@
 				else
 				{
 					PrettyConsole::puts226("Installing $brew...");
-					exec("sudo brew install $brew");
+					exec("brew install $brew");
 				}
 			}
 		}
@@ -137,6 +139,24 @@
 				} else {
 					PrettyConsole::puts226("Installing $cask...");
 					exec("sudo brew cask install --force $dirs $cask");
+				}
+			}
+		}
+	}
+
+	class Gems
+	{
+		static function install($gems)
+		{
+			foreach ($gems as $gem) 
+			{
+				$test = exec("sudo gem list | grep \"$gem\"");
+				if(strpos($test, $gem) !== false)
+				{
+					PrettyConsole::puts254("$gem installed.");
+				} else {
+					PrettyConsole::puts226("Installing $gem...");
+					exec("sudo gem install $gem");
 				}
 			}
 		}
