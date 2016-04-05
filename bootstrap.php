@@ -30,7 +30,7 @@
 	Preference::assert('Dock Tilesize','com.apple.dock tilesize',64,false);
 	Preference::assert('Dock Magnification','com.apple.dock magnification',true,false);
 	Preference::assert('Dock Magnified Size','com.apple.dock largesize',128,false);
-	Preference::assert('Most Recently Used Spaces','com.apple.dock mru-spaces',false,false);
+	Preference::assert('Arrange Spaces By Most Recently Used Spaces','com.apple.dock mru-spaces',false,false);
 	Preference::assert('Screensaver Password Delay','com.apple.screensaver askForPasswordDelay',5,false);
 	Preference::assert('Default Terminal Window','com.Apple.Terminal "Default Window Settings"','Pro',false);
 	Preference::assert('Startup Terminal Window','com.Apple.Terminal "Startup Window Settings"','Pro',false);
@@ -75,7 +75,8 @@
 		'slack',
 		'smcfancontrol',
 		'sublime-text',
-		'owncloud'
+		'owncloud',
+		'bitbar'
 	));
 	Gems::install(array(
 		'synx'

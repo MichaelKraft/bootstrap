@@ -2,23 +2,30 @@
 
 A script to bootstrap a fresh Mac to fully configured. Current as of El Capitan.
 
-## Installation
-
-```sh
-bash -c "$(curl -sL https://raw.github.com/gregschoen/bootstrap/master/bootstrap)"
-```
-
-```sh
-mackup restore --dry-run
-```
-
 ## Included Software
 
 - [homebrew](https://github.com/Homebrew/homebrew) - package manager
-- [homebrew-dupes](https://github.com/Homebrew/homebrew-dupes) - osx duplicate software
 - [homebrew-cask](https://github.com/caskroom/homebrew-cask) - app installation
-- [homebrew-fonts](https://github.com/caskroom/homebrew-fonts) - font installation
-- [mackup](https://github.com/lra/mackup) - dropbox dotfiles symlinks
+
+### Brews
+
+* `git`
+* `git-extras`
+* `logstalgia`
+* `fish` Friendly Interactive SHell
+
+### Casks
+
+* `dropbox`
+* `expandrive`
+* `handbrake`
+* `macdown`
+* `minecraft`
+* `slack`
+* `smcfancontrol`
+* `sublime-text`
+* `owncloud`
+* `bitbar`
 
 ## Notes
 
