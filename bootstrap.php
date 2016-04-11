@@ -64,7 +64,10 @@
 		'git',
 		'git-extras',
 		'logstalgia',
-		'fish'
+		'fish',
+		'qemu',
+		'md5sha1sum',
+		'ruby'
 	));
 	Brew::casks(array(
 		'dropbox',
@@ -76,7 +79,9 @@
 		'smcfancontrol',
 		'sublime-text',
 		'owncloud',
-		'bitbar'
+		'bitbar',
+		'virtualbox',
+		'virtualbox-extension-pack'
 	));
 	Gems::install(array(
 		'synx'

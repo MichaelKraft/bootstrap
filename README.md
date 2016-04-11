@@ -9,23 +9,27 @@ A script to bootstrap a fresh Mac to fully configured. Current as of El Capitan.
 
 ### Brews
 
-* `git`
-* `git-extras`
-* `logstalgia`
-* `fish` Friendly Interactive SHell
+* Git
+* Git Extras
+* Logstalgia
+* Fish - Friendly Interactive SHell
+* Qemu (Part of Vagrant/Xenserver)
+* `md5sha1sum` (Part of Vagrant/Xenserver)
+* Ruby	
 
 ### Casks
 
-* `dropbox`
-* `expandrive`
-* `handbrake`
-* `macdown`
-* `minecraft`
-* `slack`
-* `smcfancontrol`
-* `sublime-text`
-* `owncloud`
-* `bitbar`
+* Dropbox
+* Expandrive
+* Handbrake
+* Macdown
+* Minecraft
+* Slack
+* Smcfancontrol
+* Sublime-text
+* Owncloud Client
+* Bitbar
+* Virtualbox + Extensions
 
 ## Notes
 
