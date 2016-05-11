@@ -67,7 +67,8 @@
 		'fish',
 		'qemu',
 		'md5sha1sum',
-		'ruby'
+		'ruby',
+		'brightness'
 	));
 	Brew::casks(array(
 		'dropbox',
