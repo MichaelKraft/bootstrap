@@ -38,7 +38,7 @@
 	Preference::assert('Flash Data Separators','com.apple.menuextra.clock FlashDateSeparators',false,false);
 	Preference::assert('Menubar Clock Format','com.apple.menuextra.clock DateFormat','EEE MMM d  h:mm',false);
 	Preference::assert('Analog Clock','com.apple.menuextra.clock IsAnalog',false,false);
-
+	Preference::assert('Minimize Animation','com.apple.dock mineffect','scale',false);
 	echo "\n";
 
 	$checked = $stats->checked;
