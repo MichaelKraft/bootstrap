@@ -4,6 +4,8 @@
 
 	PrettyConsole::puts10('Configuring System');
 
+	RootPassword::disable();
+
 	SystemSetup::assert('Remote Login','remotelogin','On');
 	SystemSetup::assert('Restart on Freeze','restartfreeze','On');
 
@@ -89,6 +91,24 @@
 	));
 
 	// classes, functions, etc
+
+	class RootPassword
+	{
+		static function disable()
+		{
+			$USER = $_SERVER["PHP_AUTH_USER"];
+			$test = exec("sudo grep \"$USER.*NOPASSWD\" /etc/sudoers");
+			if(strlen($test) < 4)
+			{
+				PrettyConsole::puts226("Disabling root password...");
+				exec("echo \"$USER ALL=(ALL) NOPASSWD: ALL\" | sudo tee -a /etc/sudoers > /dev/null`");
+			}
+			else
+			{
+				PrettyConsole::puts254("Root password is disabled.");
+			}
+		}
+	}
 
 	class Brew
 	{
