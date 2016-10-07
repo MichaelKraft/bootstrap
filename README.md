@@ -1,6 +1,8 @@
 # Bootstrap
 
-A script to bootstrap a fresh Mac to fully configured. Current as of El Capitan.
+A script to bootstrap a fresh Mac to fully configured. Current as of Sierra.
+
+* Disables root password.
 
 ## Included Software
 
@@ -15,7 +17,8 @@ A script to bootstrap a fresh Mac to fully configured. Current as of El Capitan.
 * Fish - Friendly Interactive SHell
 * Qemu (Part of Vagrant/Xenserver)
 * `md5sha1sum` (Part of Vagrant/Xenserver)
-* Ruby	
+* Ruby
+* Brightness	
 
 ### Casks
 
@@ -30,6 +33,10 @@ A script to bootstrap a fresh Mac to fully configured. Current as of El Capitan.
 * Owncloud Client
 * Bitbar
 * Virtualbox + Extensions
+
+## Gems
+
+* Synx
 
 ## Notes
 
