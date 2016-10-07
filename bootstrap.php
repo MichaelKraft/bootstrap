@@ -9,38 +9,40 @@
 	SystemSetup::assert('Remote Login','remotelogin','On');
 	SystemSetup::assert('Restart on Freeze','restartfreeze','On');
 
-	// preferences
-	Preference::assert('Natural Scrolling','NSGlobalDomain com.apple.swipescrolldirection',false,false);
-	Preference::assert('Firewall','/Library/Preferences/com.apple.alf globalstate',1,true);
-	Preference::assert('Trackpad Tap-To-Click','com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking',false,false);
-	Preference::assert('Mouse Tap-To-Click','NSGlobalDomain com.apple.mouse.tapBehavior',0,false);
-	Preference::assert('Expand Save Panel','NSGlobalDomain NSNavPanelExpandedStateForSaveMode',true,false);
-	Preference::assert('Save New Documents to Cloud','NSGlobalDomain NSDocumentSaveNewDocumentsToCloud', false, false);
-	Preference::assert('Guest Account','/Library/Preferences/com.apple.loginwindow GuestEnabled',false,true);
-	Preference::assert('Show Full Names on Login Screen','/Library/Preferences/com.apple.loginwindow SHOWFULLNAME',true,true);
-	Preference::assert('Preferred View Style','com.apple.finder FXPreferredViewStyle','clmv',false);
-	Preference::assert('Confirm Empty Trash','com.apple.finder WarnOnEmptyTrash',false,false);
-	Preference::assert('Empty Trash Securely','com.apple.finder EmptyTrashSecurely',true,false);
-	Preference::assert('Show All Files','com.apple.finder AppleShowAllFiles',false,false);
-	Preference::assert('Show All Extensions','com.apple.finder AppleShowAllExtensions',true,false);
-	Preference::assert('Show Hard Drives on Desktop','com.apple.finder ShowHardDrivesOnDesktop',false,false);
-	Preference::assert('Prevent Write to network stores','com.apple.desktopservices DSDontWriteNetworkStores',true,false);
-	Preference::assert('Skip Disc Image Verify','com.apple.frameworks.diskimages skip-verify',true,false);
-	Preference::assert('Skip Disk Image Verify (Locked)','com.apple.frameworks.diskimages skip-verify-locked',true,false);
-	Preference::assert('Skip Disk Image Verify (Remote)','com.apple.frameworks.diskimages skip-verify-remote',true,false);
-	Preference::assert('Auto-Hide Dock','com.apple.dock autohide',false,false);
-	Preference::assert('Dock Tilesize','com.apple.dock tilesize',64,false);
-	Preference::assert('Dock Magnification','com.apple.dock magnification',true,false);
-	Preference::assert('Dock Magnified Size','com.apple.dock largesize',128,false);
-	Preference::assert('Arrange Spaces By Most Recently Used Spaces','com.apple.dock mru-spaces',false,false);
-	Preference::assert('Screensaver Password Delay','com.apple.screensaver askForPasswordDelay',5,false);
-	Preference::assert('Default Terminal Window','com.Apple.Terminal "Default Window Settings"','Pro',false);
-	Preference::assert('Startup Terminal Window','com.Apple.Terminal "Startup Window Settings"','Pro',false);
-	Preference::assert('Show Battery Percentage','com.apple.menuextra.battery ShowPercent',true,false);
-	Preference::assert('Flash Data Separators','com.apple.menuextra.clock FlashDateSeparators',false,false);
-	Preference::assert('Menubar Clock Format','com.apple.menuextra.clock DateFormat','EEE MMM d  h:mm',false);
-	Preference::assert('Analog Clock','com.apple.menuextra.clock IsAnalog',false,false);
-	Preference::assert('Minimize Animation','com.apple.dock mineffect','scale',false);
+//  PREFERENCES:
+//  # preference                                          # key                                                      # value            # sudo?
+	Preference::assert('Interface Style',                 'NSGlobalDomain AppleInterfaceTheme',                      'Dark',            true);
+	Preference::assert('Natural Scrolling',               'NSGlobalDomain com.apple.swipescrolldirection',           false,             false);
+	Preference::assert('Mouse Tap-To-Click',              'NSGlobalDomain com.apple.mouse.tapBehavior',              0,                 false);
+	Preference::assert('Firewall',                        '/Library/Preferences/com.apple.alf globalstate',          1,                 true );
+	Preference::assert('Trackpad Tap-To-Click',           'com.apple.AppleMultitouchTrackpad Clicking',              false,             false);
+	Preference::assert('Expand Save Panel',               'NSGlobalDomain NSNavPanelExpandedStateForSaveMode',       true,              false);
+	Preference::assert('Save New Documents to Cloud',     'NSGlobalDomain NSDocumentSaveNewDocumentsToCloud',        false,             true );
+	Preference::assert('Guest Account',                   '/Library/Preferences/com.apple.loginwindow GuestEnabled', false,             true );
+	Preference::assert('Show Full Names on Login Screen', '/Library/Preferences/com.apple.loginwindow SHOWFULLNAME', true,              true );
+	Preference::assert('Preferred View Style',            'com.apple.finder FXPreferredViewStyle',                   'clmv',            false);
+	Preference::assert('Confirm Empty Trash',             'com.apple.finder WarnOnEmptyTrash',                       false,             false);
+	Preference::assert('Empty Trash Securely',            'com.apple.finder EmptyTrashSecurely',                     true,              false);
+	Preference::assert('Show All Files',                  'com.apple.finder AppleShowAllFiles',                      true,              false);
+	Preference::assert('Show All Extensions',             'com.apple.finder AppleShowAllExtensions',                 true,              false);
+	Preference::assert('Show Hard Drives on Desktop',     'com.apple.finder ShowHardDrivesOnDesktop',                false,             false);
+	Preference::assert('Prevent Write to network stores', 'com.apple.desktopservices DSDontWriteNetworkStores',      true,              false);
+	Preference::assert('Skip Disc Image Verify',          'com.apple.frameworks.diskimages skip-verify',             true,              false);
+	Preference::assert('Skip Disk Image Verify (Locked)', 'com.apple.frameworks.diskimages skip-verify-locked',      true,              false);
+	Preference::assert('Skip Disk Image Verify (Remote)', 'com.apple.frameworks.diskimages skip-verify-remote',      true,              false);
+	Preference::assert('Auto-Hide Dock',                  'com.apple.dock autohide',                                 false,             false);
+	Preference::assert('Dock Tilesize',                   'com.apple.dock tilesize',                                 48,                false);
+	Preference::assert('Dock Magnification',              'com.apple.dock magnification',                            true,              false);
+	Preference::assert('Dock Magnified Size',             'com.apple.dock largesize',                                80,                false);
+	Preference::assert('Auto-Arrange Spaces',             'com.apple.dock mru-spaces',                               false,             false);
+	Preference::assert('Screensaver Password Delay',      'com.apple.screensaver askForPasswordDelay',               5,                 false);
+	Preference::assert('Default Terminal Window',         'com.Apple.Terminal "Default Window Settings"',            'Pro',             false);
+	Preference::assert('Startup Terminal Window',         'com.Apple.Terminal "Startup Window Settings"',            'Pro',             false);
+	Preference::assert('Show Battery Percentage',         'com.apple.menuextra.battery ShowPercent',                 true,              false);
+	Preference::assert('Flash Data Separators',           'com.apple.menuextra.clock FlashDateSeparators',           false,             false);
+	Preference::assert('Menubar Clock Format',            'com.apple.menuextra.clock DateFormat',                    'EEE MMM d  h:mm', false);
+	Preference::assert('Analog Clock',                    'com.apple.menuextra.clock IsAnalog',                      false,             false);
+	Preference::assert('Minimize Animation',              'com.apple.dock mineffect',                                'scale',           false);
 	echo "\n";
 
 	$checked = $stats->checked;
@@ -79,6 +81,7 @@
 		'macdown',
 		'minecraft',
 		'slack',
+		'spotify',
 		'smcfancontrol',
 		'sublime-text',
 		'owncloud',
@@ -96,12 +99,13 @@
 	{
 		static function disable()
 		{
-			$USER = $_SERVER["PHP_AUTH_USER"];
+			$USER = get_current_user();
+
 			$test = exec("sudo grep \"$USER.*NOPASSWD\" /etc/sudoers");
 			if(strlen($test) < 4)
 			{
 				PrettyConsole::puts226("Disabling root password...");
-				exec("echo \"$USER ALL=(ALL) NOPASSWD: ALL\" | sudo tee -a /etc/sudoers > /dev/null`");
+				exec("echo \"$USER ALL=(ALL) NOPASSWD: ALL\" | sudo tee -a /etc/sudoers > /dev/null");
 			}
 			else
 			{
@@ -141,7 +145,7 @@
 		static function packages($brews)
 		{
 			foreach ($brews as $brew) {
-				$installed = (strpos(exec("sudo brew ls --versions $brew"), $brew) !== false);
+				$installed = (strpos(exec("brew ls --versions $brew"), $brew) !== false);
 				if($installed)
 				{
 					PrettyConsole::puts254("$brew installed.");
@@ -157,7 +161,7 @@
 		{
 			$dirs = '--appdir=/Applications --fontdir=/Library/Fonts'; 
 			foreach ($casks as $cask) {
-				$output = exec("sudo brew cask ls $dirs $cask 2>&1");
+				$output = exec("brew cask ls $dirs $cask 2>&1");
 				$installed = !(strpos($output, 'nothing to list') !== false);
 
 				if($installed)
@@ -165,7 +169,7 @@
 					PrettyConsole::puts254("$cask installed.");
 				} else {
 					PrettyConsole::puts226("Installing $cask...");
-					exec("sudo brew cask install --force $dirs $cask");
+					exec("brew cask install --force $dirs $cask");
 				}
 			}
 		}
@@ -226,7 +230,7 @@
 				$currentValue = exec("defaults read $key");
 			}
 
-			if(count($currentValue) > 0 && $value == $currentValue) {
+			if(count($currentValue) > 0 && $currentValue != "" && $value == $currentValue) {
 				if(is_bool($value))
 				{
 					if($value)
