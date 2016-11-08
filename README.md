@@ -19,6 +19,7 @@ A script to bootstrap a fresh Mac to fully configured. Current as of Sierra.
 * `md5sha1sum` (Part of Vagrant/Xenserver)
 * Ruby
 * Brightness	
+* Bash-Completion
 
 ### Casks
 

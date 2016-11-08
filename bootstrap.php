@@ -15,7 +15,7 @@
 	Preference::assert('Natural Scrolling',               'NSGlobalDomain com.apple.swipescrolldirection',           false,             false);
 	Preference::assert('Mouse Tap-To-Click',              'NSGlobalDomain com.apple.mouse.tapBehavior',              0,                 false);
 	Preference::assert('Firewall',                        '/Library/Preferences/com.apple.alf globalstate',          1,                 true );
-	Preference::assert('Trackpad Tap-To-Click',           'com.apple.AppleMultitouchTrackpad Clicking',              false,             false);
+	Preference::assert('Trackpad Tap-To-Click',           'com.apple.AppleMultitouchTrackpad Clicking',              false,             true );
 	Preference::assert('Expand Save Panel',               'NSGlobalDomain NSNavPanelExpandedStateForSaveMode',       true,              false);
 	Preference::assert('Save New Documents to Cloud',     'NSGlobalDomain NSDocumentSaveNewDocumentsToCloud',        false,             true );
 	Preference::assert('Guest Account',                   '/Library/Preferences/com.apple.loginwindow GuestEnabled', false,             true );
@@ -31,9 +31,9 @@
 	Preference::assert('Skip Disk Image Verify (Locked)', 'com.apple.frameworks.diskimages skip-verify-locked',      true,              false);
 	Preference::assert('Skip Disk Image Verify (Remote)', 'com.apple.frameworks.diskimages skip-verify-remote',      true,              false);
 	Preference::assert('Auto-Hide Dock',                  'com.apple.dock autohide',                                 false,             false);
-	Preference::assert('Dock Tilesize',                   'com.apple.dock tilesize',                                 64,                false);
+	Preference::assert('Dock Tilesize',                   'com.apple.dock tilesize',                                 52,                false);
 	Preference::assert('Dock Magnification',              'com.apple.dock magnification',                            false,             false);
-	Preference::assert('Dock Magnified Size',             'com.apple.dock largesize',                                64,                false);
+	Preference::assert('Dock Magnified Size',             'com.apple.dock largesize',                                52,                false);
 	Preference::assert('Auto-Arrange Spaces',             'com.apple.dock mru-spaces',                               false,             false);
 	Preference::assert('Screensaver Password Delay',      'com.apple.screensaver askForPasswordDelay',               5,                 false);
 	Preference::assert('Default Terminal Window',         'com.Apple.Terminal "Default Window Settings"',            'Pro',             false);
@@ -73,7 +73,8 @@
 		'md5sha1sum',
 		'ruby',
 		'brightness',
-		'php54-ssh2'
+		'php54-ssh2',
+		'bash-completion'
 	));
 	Brew::casks(array(
 		'dropbox',
