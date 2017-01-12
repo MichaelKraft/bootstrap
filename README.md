@@ -20,6 +20,7 @@ A script to bootstrap a fresh Mac to fully configured. Current as of Sierra.
 * Ruby
 * Brightness	
 * Bash-Completion
+* thefuck
 
 ### Casks
 
@@ -33,7 +34,8 @@ A script to bootstrap a fresh Mac to fully configured. Current as of Sierra.
 * Sublime-text
 * Owncloud Client
 * Bitbar
-* Virtualbox + Extensions
+* Aeriel
+* Licecap
 
 ## Gems
 

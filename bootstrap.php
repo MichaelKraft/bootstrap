@@ -73,7 +73,7 @@
 		'md5sha1sum',
 		'ruby',
 		'brightness',
-		'php54-ssh2',
+		'thefuck',
 		'bash-completion'
 	));
 	Brew::casks(array(
@@ -88,8 +88,8 @@
 		'sublime-text',
 		'owncloud',
 		'bitbar',
-		'virtualbox',
-		'virtualbox-extension-pack'
+		'aerial',
+		'licecap'
 	));
 	Gems::install(array(
 		'synx'
