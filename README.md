@@ -9,6 +9,10 @@ A script to bootstrap a fresh Mac to fully configured. Current as of Sierra.
 - [homebrew](https://github.com/Homebrew/homebrew) - package manager
 - [homebrew-cask](https://github.com/caskroom/homebrew-cask) - app installation
 
+### Taps
+
+* dupes
+
 ### Brews
 
 * Git
@@ -21,6 +25,9 @@ A script to bootstrap a fresh Mac to fully configured. Current as of Sierra.
 * Brightness	
 * Bash-Completion
 * thefuck
+* cowsay
+* fortune
+* dupes/screen
 
 ### Casks
 

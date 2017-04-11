@@ -31,9 +31,9 @@
 	Preference::assert('Skip Disk Image Verify (Locked)', 'com.apple.frameworks.diskimages skip-verify-locked',      true,              false);
 	Preference::assert('Skip Disk Image Verify (Remote)', 'com.apple.frameworks.diskimages skip-verify-remote',      true,              false);
 	Preference::assert('Auto-Hide Dock',                  'com.apple.dock autohide',                                 false,             false);
-	Preference::assert('Dock Tilesize',                   'com.apple.dock tilesize',                                 52,                false);
-	Preference::assert('Dock Magnification',              'com.apple.dock magnification',                            false,             false);
-	Preference::assert('Dock Magnified Size',             'com.apple.dock largesize',                                52,                false);
+	Preference::assert('Dock Tilesize',                   'com.apple.dock tilesize',                                 60,                false);
+	Preference::assert('Dock Magnification',              'com.apple.dock magnification',                            true,             false);
+	Preference::assert('Dock Magnified Size',             'com.apple.dock largesize',                                120,                false);
 	Preference::assert('Auto-Arrange Spaces',             'com.apple.dock mru-spaces',                               false,             false);
 	Preference::assert('Screensaver Password Delay',      'com.apple.screensaver askForPasswordDelay',               5,                 false);
 	Preference::assert('Default Terminal Window',         'com.Apple.Terminal "Default Window Settings"',            'Pro',             false);
@@ -74,7 +74,11 @@
 		'ruby',
 		'brightness',
 		'thefuck',
-		'bash-completion'
+		'bash-completion',
+		'carthage',
+		'cowsay',
+		'fortune',
+		'homebrew/dupes/screen'
 	));
 	Brew::casks(array(
 		'dropbox',
@@ -120,22 +124,11 @@
 	{
 		static function install()
 		{
-			PrettyConsole::puts251("Repairing permissions...");
-			$directories = array(
-					'/usr/local',
-					'/Library/Caches/Homebrew',
-					'/opt/homebrew-cask'
-				);
-			foreach ($directories as $directory) {
-				exec("sudo chgrp -R admin $directory");
-				exec("sudo chmod -R g+w $directory");
-				PrettyConsole::puts47("Repaired $directory");
-			}
-
 			if(!file_exists('/usr/local/bin/brew'))
 			{
 				PrettyConsole::puts226("Installing Homebrew...");
 				exec('ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null');
+				exec('brew tap homebrew/dupes');
 			}
 			else
 			{
