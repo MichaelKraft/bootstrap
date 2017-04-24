@@ -96,7 +96,8 @@
 		'licecap'
 	));
 	Gems::install(array(
-		'synx'
+		'synx',
+		'cocoapods'
 	));
 
 	// classes, functions, etc

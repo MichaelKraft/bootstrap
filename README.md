@@ -47,6 +47,7 @@ A script to bootstrap a fresh Mac to fully configured. Current as of Sierra.
 ## Gems
 
 * Synx
+* Cocoapods
 
 ## Notes
 
