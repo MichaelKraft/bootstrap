@@ -31,9 +31,9 @@
 	Preference::assert('Skip Disk Image Verify (Locked)', 'com.apple.frameworks.diskimages skip-verify-locked',      true,              false);
 	Preference::assert('Skip Disk Image Verify (Remote)', 'com.apple.frameworks.diskimages skip-verify-remote',      true,              false);
 	Preference::assert('Auto-Hide Dock',                  'com.apple.dock autohide',                                 false,             false);
-	Preference::assert('Dock Tilesize',                   'com.apple.dock tilesize',                                 60,                false);
+	Preference::assert('Dock Tilesize',                   'com.apple.dock tilesize',                                 44,                false);
 	Preference::assert('Dock Magnification',              'com.apple.dock magnification',                            true,             false);
-	Preference::assert('Dock Magnified Size',             'com.apple.dock largesize',                                120,                false);
+	Preference::assert('Dock Magnified Size',             'com.apple.dock largesize',                                96,                false);
 	Preference::assert('Auto-Arrange Spaces',             'com.apple.dock mru-spaces',                               false,             false);
 	Preference::assert('Screensaver Password Delay',      'com.apple.screensaver askForPasswordDelay',               5,                 false);
 	Preference::assert('Default Terminal Window',         'com.Apple.Terminal "Default Window Settings"',            'Pro',             false);
@@ -93,7 +93,8 @@
 		'owncloud',
 		'bitbar',
 		'aerial',
-		'licecap'
+		'licecap',
+		'qlvideo'
 	));
 	Gems::install(array(
 		'synx',
