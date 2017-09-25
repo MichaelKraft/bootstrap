@@ -30,8 +30,8 @@
 	Preference::assert('Skip Disc Image Verify',          'com.apple.frameworks.diskimages skip-verify',             true,              false);
 	Preference::assert('Skip Disk Image Verify (Locked)', 'com.apple.frameworks.diskimages skip-verify-locked',      true,              false);
 	Preference::assert('Skip Disk Image Verify (Remote)', 'com.apple.frameworks.diskimages skip-verify-remote',      true,              false);
-	Preference::assert('Auto-Hide Dock',                  'com.apple.dock autohide',                                 false,             false);
-	Preference::assert('Dock Tilesize',                   'com.apple.dock tilesize',                                 44,                false);
+	Preference::assert('Auto-Hide Dock',                  'com.apple.dock autohide',                                 true,             false);
+	Preference::assert('Dock Tilesize',                   'com.apple.dock tilesize',                                 64,                false);
 	Preference::assert('Dock Magnification',              'com.apple.dock magnification',                            true,             false);
 	Preference::assert('Dock Magnified Size',             'com.apple.dock largesize',                                128,                false);
 	Preference::assert('Auto-Arrange Spaces',             'com.apple.dock mru-spaces',                               false,             false);
@@ -68,8 +68,6 @@
 		'git',
 		'git-extras',
 		'logstalgia',
-		'fish',
-		'qemu',
 		'md5sha1sum',
 		'ruby',
 		'brightness',
@@ -78,12 +76,9 @@
 		'carthage',
 		'cowsay',
 		'fortune',
-		'homebrew/dupes/screen'
 	));
 	Brew::casks(array(
 		'dropbox',
-		'expandrive',
-		'handbrake',
 		'macdown',
 		'minecraft',
 		'slack',
