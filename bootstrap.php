@@ -153,7 +153,8 @@
 		}
 		static function casks($casks)
 		{
-			$dirs = '--appdir=/Applications --fontdir=/Library/Fonts'; 
+			//$dirs = '--appdir=/Applications --fontdir=/Library/Fonts'; 
+			$dirs = ''; 
 			foreach ($casks as $cask) {
 				$output = exec("brew cask ls $dirs $cask 2>&1");
 				$installed = !(strpos($output, 'nothing to list') !== false);
