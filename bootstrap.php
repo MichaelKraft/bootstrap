@@ -30,7 +30,7 @@
 	Preference::assert('Skip Disc Image Verify',          'com.apple.frameworks.diskimages skip-verify',             true,              false);
 	Preference::assert('Skip Disk Image Verify (Locked)', 'com.apple.frameworks.diskimages skip-verify-locked',      true,              false);
 	Preference::assert('Skip Disk Image Verify (Remote)', 'com.apple.frameworks.diskimages skip-verify-remote',      true,              false);
-	Preference::assert('Auto-Hide Dock',                  'com.apple.dock autohide',                                 false,             false);
+	Preference::assert('Auto-Hide Dock',                  'com.apple.dock autohide',                                 true,             false);
 	Preference::assert('Dock Tilesize',                   'com.apple.dock tilesize',                                 48,                false);
 	Preference::assert('Dock Magnification',              'com.apple.dock magnification',                            false,             false);
 	Preference::assert('Dock Magnified Size',             'com.apple.dock largesize',                                128,                false);
