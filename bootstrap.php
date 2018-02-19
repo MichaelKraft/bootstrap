@@ -92,6 +92,10 @@
 		'qlvideo'
 	));
 	Gems::install(array(
+		'jekyll',
+		'jekyll-assets',
+		'jekyll-sitemap',
+		'jekyll-paginate',
 		'synx',
 		'cocoapods'
 	));
